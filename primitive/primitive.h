@@ -54,7 +54,7 @@ public:
 
 Map* filterByItem(Map* map, int item, string val){//item属性 val过滤值
     for(List* ptr = map->vals;ptr!= nullptr;ptr = ptr->next){//遍历数据集合
-        Data* temp=ptr->getStart()
+        Data* temp=ptr->getStart()//初始化指针位置
         for(int i =0;i<item;i++,temp=temp->next);//获取当前数据字段
         if(strcmp(temp->val, val)!=0){//判断是否符合过滤条件
             ptr->delList()//删除不满足条件数据
